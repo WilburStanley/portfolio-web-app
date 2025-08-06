@@ -1,0 +1,181 @@
+:root {
+    --icon-size: 2.5rem;
+    --content-width: 80%;
+}
+
+.homepageSec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.homeContentContainer {
+    width: var(--content-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    height: auto;
+    gap: 3rem;
+}
+
+#username {
+    font-size: clamp(1rem, 3vw, 2rem);
+    margin: 0;
+}
+
+.title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    padding: 0;
+}
+
+.socialsContainer {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.socialsContainer img {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    transition: transform 0.3s ease;
+}
+
+.socialsContainer img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.socialsContainer img:active {
+    transform: scale(0.95);
+}
+
+.viewContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.reachBtn {
+    flex: 1 1 auto;
+    min-width: 120px;
+    max-width: 200px;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.reachBtn:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+.reachBtn:active {
+    background-color: #e0e0e0;
+    color: black;
+    transform: scale(0.95);
+}
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: left;
+    animation: fadeIn 0.3s ease-in-out;
+    overflow: hidden;
+}
+.closeButton {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+}
+
+.modalContent > h2 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+}
+
+.modalContent > p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.modalContent > p strong {
+    font-weight: 600;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .viewContainer {
+    justify-content: center;
+  }
+  .modalContent {
+    width: 80%;
+    max-width: 90%;
+    padding: 20px;
+  }
+  .modalContent > h2 {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+  }
+
+  .modalContent > p {
+    font-size: clamp(1rem, 4vw, 1.125rem);
+  }
+}

@@ -1,0 +1,104 @@
+
+.skillsSec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 1.25rem; 
+}
+
+.skillsList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.875rem;
+}
+
+.skillsList li {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin: 0.5rem 0;
+}
+
+.subTitle {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 5rem;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselItem {
+  flex: 0 0 auto;
+  width: 6.25rem;
+  text-align: center;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.iconWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  padding: 0.5rem;
+}
+
+.icon {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.iconWrapper:hover .icon {
+  transform: scale(1.2);
+}
+.carouselWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.animatedTrack {
+  display: flex;
+  gap: 5rem;
+  animation: scrollCarousel 30s linear infinite;
+  width: max-content;
+}
+
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
