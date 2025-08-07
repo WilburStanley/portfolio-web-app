@@ -30,15 +30,15 @@ const Home = (props) => {
                         <a href={facebookLink} target="_blank" rel="noopener noreferrer">
                             <img src={facebookIcon} alt="Facebook Logo" />
                         </a>
-                        <img src={instagramIcon} alt="Instagram Logo" />
                         <a href={githubLink} target="_blank" rel="noopener noreferrer">
                             <img src={githubIcon} alt="Github Logo" />
                         </a>
                     </div>
                     <div className={styles.viewContainer}>
-                        <a href="/CV-WILBUR-STANLEY.pdf" download >
-                            <button className={styles.reachBtn}>Download Cv</button>
+                        <a href="/portfolio-web-app/CV-WILBUR-STANLEY.pdf" download>
+                          <button className={styles.reachBtn}>Download Cv</button>
                         </a>
+
                         <button className={styles.reachBtn} onClick={() => setShowModal(true)}>Contact Info</button>
                     </div>
                 </div>
